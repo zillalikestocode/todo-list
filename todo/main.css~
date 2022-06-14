@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Sora:wght@800&display=swap');
+section{
+	height: 100vh;
+	width: 100vw;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+*{
+	font-family: Raleway;
+	font-weight: 600;
+}
+
+section .todo-container {
+	position: relative;
+	margin: auto;
+	text-align: center;
+	padding: 20px;
+	padding-top: 3px;
+	background: #b19cd9;	
+	color: white;
+	border-radius: 30px;
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+section .todo-container .heading h4{
+	font-family: Sora;
+	font-weight: 800;
+	font-size: 2.5em;
+}
+section .todo-container .todoform input{
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+	padding-left: 10px;
+
+}
+section .todo-container .todoform .add-btn{
+	outline: none;
+	border: 1px solid white;
+	padding: 5px;
+	border-radius: 5px;
+	color: white;
+	background: transparent;
+	cursor: pointer;
+}
+section .todo-container .todo-list {
+	padding: 20px;
+	padding-bottom: 0;
+	margin-top: 0;
+}
+section .todo-container .todo-list .list-item{
+	margin: 0;
+	padding: 5px;
+	padding-left: 0;
+	text-align: left;
+	display: flex;
+	align-items: center
+}
+section .todo-container .todo-list .list-item .check{
+	cursor: pointer;
+	user-select: none;
+	font-size: 22px;
+	width: 30px;
+	height: 20px;
+	margin-left: auto;
+}
+section .todo-container .todo-list .list-item .check input{
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+section .todo-container .todo-list .list-item .check .checkbox{
+	position: absolute;
+	
+	height: 25px;
+	width: 25px;
+	border-radius: 5px;
+	background-color: #eee;
+}
+section .todo-container .todo-list .list-item .check:hover input ~ .checkbox{
+	background: #ccc;
+}
+section .todo-container .todo-list .list-item .check input:checked ~ .checkbox{
+	background: white;
+}
+.checkbox:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+section .todo-container .todo-list .list-item .check input:checked ~ .checkbox:after{
+	display: block;
+}
+section .todo-container .todo-list .list-item .check .checkbox:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid #b19cd9;
+	border-width: 0 3px 3px 0;
+	transform: rotate(45deg)
+}
+section .todo-container .todo-list .list-item div{
+	position: relative;
+	width: auto;
+	align-items: center;
+}
+section .todo-container .todo-list .list-item div .dash{
+	border: 1px solid grey;
+	position: absolute;
+	animation: remove-list 2s;
+	width: 100%;
+	top: 50%;
+	display: none;
+}
+@keyframes remove-list {
+	from {width: 0}
+	to {width: 100%}
+}
+section .credits {
+	margin: auto;
+	margin-top: 0;
+	font-family: Sora;
+	text-align: center ;
+
+} 
+section .credits h4{
+	font-family: Sora;
+	font-weight: 800;
+	font-size: 1.5em;
+	color: #ccc;
+}
+section .credits h4 span{
+	color: #b19cd9;
+	font-weight: 700;
+}
